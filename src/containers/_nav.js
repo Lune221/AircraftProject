@@ -1,6 +1,60 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
 
+const menu = [
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Accueil',
+    to: '/accueil',
+    icon: 'cil-flight-takeoff',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Nouvelle cotation',
+    to: '/new-cotation',
+    icon: 'cil-library-add',
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Archives',
+    to: '/theme/colors',
+    icon: 'cil-book',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Factures',
+        to: '/archives/factures',
+        icon: 'cil-money',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Commerciales',
+        to: '/archives/commerciales',
+        icon: 'cil-newspaper',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Operationnelles',
+        to: '/archives/operationnelles',
+        icon: 'cil-layers',
+      },
+    ]
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Statistiques',
+    to: '/statistiques',
+    icon: 'cil-bar-chart',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Se déconnecter',
+    to: '/deconnexion',
+    icon: <CIcon name='cil-account-logout' customClasses="c-sidebar-nav-icon"/>,
+  },
+
+]
+
 const _nav =  [
   {
     _tag: 'CSidebarNavItem',
@@ -309,4 +363,4 @@ const _nav =  [
   }
 ]
 
-export default _nav
+export default menu;
